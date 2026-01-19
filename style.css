@@ -665,17 +665,36 @@ h2{ margin: 0; font-size: 28px; letter-spacing: -0.2px; }
    Light mode – fix Experience card shape
 ========================= */
 
-:root[data-theme="light"] .t-card{
-  border-radius: 22px !important;      /* match other cards */
-  overflow: hidden;                    /* clip inner content */
-}
+/* =========================
+   Experience card – spacing expansion
+========================= */
 
-/* If the outer wrapper also has a border */
-:root[data-theme="light"] .t-item{
+:root[data-theme="light"] .t-card{
+  padding: 26px 28px !important;     /* was ~16px → feels breathable */
   border-radius: 22px !important;
 }
-:root[data-theme="light"] .t-card{
-  border: 1px solid rgba(0,113,227,.18) !important;
-  box-shadow: 0 18px 44px rgba(15, 30, 70, .12) !important;
+
+/* Increase spacing between header + content */
+:root[data-theme="light"] .t-top{
+  margin-bottom: 14px;
 }
+
+/* Bullets: improve readability */
+:root[data-theme="light"] .bullets{
+  margin-top: 14px;
+  line-height: 1.65;
+}
+
+:root[data-theme="light"] .bullets li{
+  margin: 10px 0;
+}
+
+/* Tech pill spacing */
+:root[data-theme="light"] .pill.tiny{
+  padding: 9px 14px;
+}
+:root[data-theme="light"] .t-card{
+  box-shadow: 0 22px 50px rgba(15, 30, 70, .14) !important;
+}
+
 
