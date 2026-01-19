@@ -13,34 +13,43 @@
 }
 :root[data-theme="light"]{
   /* Backgrounds */
-  --bg: #FAFBFF;              /* very soft pastel white */
+  --bg: #FFFFFF;              /* true white */
   --card: #FFFFFF;
-  --card2: #F1F4FF;
+  --card2: #F5F5F7;           /* Apple light surface */
 
   /* Text */
-  --text: #1E293B;            /* soft slate */
-  --muted: rgba(30,41,59,.65);
-  --muted2: rgba(30,41,59,.45);
+  --text: #0A0A0A;             /* near-black */
+  --muted: rgba(10,10,10,.60);
+  --muted2: rgba(10,10,10,.42);
 
   /* UI */
-  --border: rgba(30,41,59,.10);
-  --shadow: 0 14px 32px rgba(30,41,59,.12);
+  --border: rgba(0,0,0,.10);
+  --shadow: 0 10px 28px rgba(0,0,0,.12);
   --radius: 18px;
 
-  /* Pastel Accent */
-  --accent: #A5B4FC;          /* pastel indigo */
-  --accent2: #C7D2FE;         /* pastel lavender */
+  /* Accent */
+  --accent: #0071E3;          /* Apple blue */
+  --accent2: #4DA3FF;
 }
+
 :root[data-theme="light"] .btn.primary{
-  color: #1E293B;
+  color: #FFFFFF;
+  box-shadow: none;
 }
 :root[data-theme="light"] .card,
 :root[data-theme="light"] .p-card{
-  border: 1px solid rgba(30,41,59,.08);
+  background: var(--card);
+  border: 1px solid rgba(0,0,0,.08);
 }
-:root[data-theme="light"] .bg-orb{
-  opacity: .22;
+:root[data-theme="light"] .bg-orb,
+:root[data-theme="light"] .bg-grid{
+  display: none;
 }
+:root[data-theme="light"] .topbar{
+  background: rgba(255,255,255,.85);
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
 
 *{ box-sizing:border-box; }
 html,body{ margin:0; padding:0; scroll-behavior:smooth; }
