@@ -11,19 +11,31 @@
   --shadow: 0 18px 60px rgba(0,0,0,.45);
   --radius: 18px;
 }
-/* Light theme overrides */
+
 :root[data-theme="light"]{
-  --bg: #F6F8FF;
-  --text: #0B1220;
-  --muted: rgba(11,18,32,.72);
-  --muted2: rgba(11,18,32,.58);
+  --bg: #F9FAFF;                 /* clean white */
+  --text: #0B1220;               /* near-black */
+  --muted: rgba(11,18,32,.68);
+  --muted2: rgba(11,18,32,.52);
+
   --border: rgba(11,18,32,.10);
-  --card: rgba(255,255,255,.78);
-  --card2: rgba(255,255,255,.92);
-  --shadow: 0 18px 60px rgba(0,0,0,.12);
-  --accent: #3B6BFF;
-  --accent2: #7B4DFF;
+
+  --card: #FFFFFF;               /* true white cards */
+  --card2: #F3F5FF;              /* subtle hover */
+
+  --shadow: 0 18px 40px rgba(20,30,80,.12);
+
+  --accent: #3B5BFF;             /* controlled blue */
+  --accent2: #6A5BFF;            /* soft violet */
 }
+:root[data-theme="light"] .bg-orb{
+  opacity: .18;
+}
+:root[data-theme="light"] .bg-grid{
+  opacity: .08;
+}
+
+
 
 
 *{ box-sizing:border-box; }
