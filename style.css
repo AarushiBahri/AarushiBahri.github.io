@@ -641,21 +641,24 @@ h2{ margin: 0; font-size: 28px; letter-spacing: -0.2px; }
   background: transparent !important;
   box-shadow: none !important;
 }
-:root[data-theme="light"] .p-badge{
-  background: rgba(0,113,227,.12) !important;
-  color: #0B1220 !important;
-  border: 1px solid rgba(0,113,227,.25) !important;
-  backdrop-filter: none !important;
+/* Light mode: make the badge look like dark mode (dark glass pill) */
+:root[data-theme="light"] .p-media.split .p-badge{
+  background: rgba(7,10,18,.45) !important;
+  color: rgba(255,255,255,.92) !important;
+  border: 1px solid rgba(255,255,255,.22) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  box-shadow: 0 10px 24px rgba(0,0,0,.18) !important;
 }
-:root[data-theme="light"] .p-media.split img[src*="PathLearner"]{
-  filter: grayscale(100%) contrast(.9) brightness(.95);
-}
-:root[data-theme="light"] .p-card.split{
-  background: linear-gradient(
-    180deg,
-    #EAF2FF 0%,
-    #E3EEFF 100%
-  ) !important;
 
-  border: 1px solid rgba(0,113,227,.18) !important;
+/* Keep it readable on top of images */
+:root[data-theme="light"] .p-media.split .p-badge{
+  z-index: 3 !important;
 }
+:root[data-theme="light"] .p-media.split .p-badge{
+  font-weight: 900 !important;
+  font-size: 12px !important;
+  padding: 8px 10px !important;
+  border-radius: 999px !important;
+}
+
