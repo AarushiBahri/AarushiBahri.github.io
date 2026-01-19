@@ -12,11 +12,6 @@
   --radius: 18px;
 }
 
-
-
-
-
-
 *{ box-sizing:border-box; }
 html,body{ margin:0; padding:0; scroll-behavior:smooth; }
 body{
@@ -703,5 +698,27 @@ h3{ margin:0; font-size: 16px; }
   width: auto;
   height: auto;
   object-fit: contain;     /* shows full image */
+}
+/* Theme toggle button */
+.theme-toggle{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+  color: var(--text);
+  font-weight: 900;
+  cursor: pointer;
+}
+.theme-toggle:hover{ opacity:.95; }
+.theme-ico{ font-size: 14px; }
+
+/* Light mode: make toggle look correct */
+:root[data-theme="light"] .theme-toggle{
+  border: 1px solid rgba(11,18,32,.12);
+  background: rgba(11,18,32,.04);
+  color: var(--text);
 }
 
