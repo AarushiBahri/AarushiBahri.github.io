@@ -11,61 +11,37 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <script>
-  const THEME_KEY = "themePreference"; // "light" | "dark" | null
+  const THEME_KEY = "theme"; // "light" | "dark"
+  const root = document.documentElement;
+  const btn = document.getElementById("themeToggle");
 
-  function themeByTime(){
-    const h = new Date().getHours();
-    return (h >= 7 && h < 19) ? "light" : "dark";
-  }
+  function applyTheme(theme){
+    root.setAttribute("data-theme", theme);
 
-  function setTheme(theme){
-    document.documentElement.setAttribute("data-theme", theme);
+    const ico = btn?.querySelector(".theme-ico");
+    const txt = btn?.querySelector(".theme-text");
 
-    const btn = document.getElementById("themeToggle");
-    if (!btn) return;
-    const ico = btn.querySelector(".theme-ico");
-    const txt = btn.querySelector(".theme-text");
-
-    const isLight = theme === "light";
-    ico.textContent = isLight ? "☀️" : "🌙";
-    txt.textContent = isLight ? "Light" : "Dark";
-  }
-
-  function initTheme(){
-    const saved = localStorage.getItem(THEME_KEY);
-    if (saved === "light" || saved === "dark"){
-      setTheme(saved);
+    if (theme === "light"){
+      if (ico) ico.textContent = "☀️";
+      if (txt) txt.textContent = "Light";
     } else {
-      setTheme(themeByTime());
+      if (ico) ico.textContent = "🌙";
+      if (txt) txt.textContent = "Dark";
     }
   }
 
-  initTheme();
+  // Load saved theme or default to dark
+  const saved = localStorage.getItem(THEME_KEY) || "dark";
+  applyTheme(saved);
 
-  // If user hasn't chosen manually, keep auto-updating every 5 minutes
-  setInterval(() => {
-    const saved = localStorage.getItem(THEME_KEY);
-    if (!saved) setTheme(themeByTime());
-  }, 5 * 60 * 1000);
-
-  // Toggle handler
-  document.getElementById("themeToggle")?.addEventListener("click", () => {
-    const current = document.documentElement.getAttribute("data-theme") || "dark";
+  // Toggle on click
+  btn?.addEventListener("click", () => {
+    const current = root.getAttribute("data-theme") || "dark";
     const next = current === "dark" ? "light" : "dark";
     localStorage.setItem(THEME_KEY, next);
-    setTheme(next);
+    applyTheme(next);
   });
-
-  // Optional: allow user to return to auto mode by right-clicking the toggle
-  document.getElementById("themeToggle")?.addEventListener("contextmenu", (e) => {
-    e.preventDefault();
-    localStorage.removeItem(THEME_KEY);
-    setTheme(themeByTime());
-  });
-</script>
-
-  
-
+  </script>
   <body>
     <!-- Background visuals -->
     <div class="bg-orb orb1"></div>
@@ -91,6 +67,7 @@
             <span class="theme-ico" aria-hidden="true">🌙</span>
             <span class="theme-text">Dark</span>
           </button>
+
 
         </nav>
       </div>
@@ -375,6 +352,14 @@ I am seeking <span class ="bold-text">Summer 2026 internships</span> in <span cl
         FastAPI, Node.js, RESTful APIs, JSON, Backend System Design, API Integration, Authentication & Validation
       </p>
     </div>
+
+    <div class="card">
+      <h3>Frontend </h3>
+      <p class="muted">
+        React, ReactFlow, HTML, CSS
+      </p>
+    </div>
+
 
     <div class="card">
       <h3>Data Engineering</h3>
