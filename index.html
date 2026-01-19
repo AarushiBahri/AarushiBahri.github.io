@@ -3,296 +3,393 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Aarushi Bahri | Data Science & Software Engineering Portfolio</title>
+    <title>Aarushi Bahri | Portfolio</title>
     <meta
       name="description"
-      content="MS Data Science (Stony Brook, 2027). 2+ years building large-scale ETL pipelines and enterprise data systems with Python, SQL, Oracle, and Unix."
+      content="MS Data Science (2027). Data Engineering + Backend Systems. Python, SQL, FastAPI, PostgreSQL."
     />
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <header class="container">
-      <nav class="nav">
-        <div class="brand">Aarushi Bahri</div>
-        <div class="nav-links">
+    <!-- Background visuals -->
+    <div class="bg-orb orb1"></div>
+    <div class="bg-orb orb2"></div>
+    <div class="bg-grid"></div>
+
+    <!-- Navbar -->
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="#top">
+          <span class="brand-dot"></span>
+          <span>Aarushi Bahri</span>
+        </a>
+
+        <nav class="nav-links">
           <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
           <a href="#education">Education</a>
-          <a href="#contact">Contact</a>
-          <a class="btn" href="assets/Aarushi_Bahri_Resume.pdf" target="_blank" rel="noopener">
-            Resume
-          </a>
-        </div>
-      </nav>
-
-      <section class="hero">
-        <p class="tag">
-          MS Data Science (2027) • Data Engineering • Backend Systems
-        </p>
-        <h1>
-          Building reliable data pipelines, analytics workflows, and production-ready systems.
-        </h1>
-        <p class="sub">
-          I’m a Data Science graduate student with 2+ years of experience building large-scale ETL pipelines,
-          enterprise data systems, and analytics workflows. Strong in Python, SQL, databases, and cross-functional
-          problem solving to drive data-driven decisions.
-        </p>
-
-        <div class="cta">
-          <a class="btn" href="#projects">View Projects</a>
-          <a class="btn ghost" href="https://github.com/AarushiBahri" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn ghost" href="https://linkedin.com/in/aarushibahri" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-
-        <div class="quick">
-          <div class="quick-card">
-            <p class="quick-title">Core Focus</p>
-            <p class="quick-text">ETL • Databases • Backend APIs • Monitoring</p>
-          </div>
-          <div class="quick-card">
-            <p class="quick-title">Strengths</p>
-            <p class="quick-text">Python • SQL • Oracle/MySQL • Unix/Shell</p>
-          </div>
-          <div class="quick-card">
-            <p class="quick-title">Seeking</p>
-            <p class="quick-text">Summer 2026 SWE / Data Engineering Internships</p>
-          </div>
-        </div>
-      </section>
+          <a href="#contact" class="pill">Contact</a>
+          <a class="pill solid" href="assets/Aarushi_Bahri_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </nav>
+      </div>
     </header>
 
-    <main class="container">
-      <!-- PROJECTS -->
+    <main id="top" class="container">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-left">
+          <div class="kicker">
+            <span class="badge">MS Data Science • 2027</span>
+            <span class="badge ghost">Data Engineering • Backend</span>
+          </div>
+
+          <h1>
+            I build <span class="grad">reliable data systems</span> and
+            <span class="grad">production-ready services</span>.
+          </h1>
+
+          <p class="lead">
+            2+ years building large-scale ETL pipelines, enterprise data workflows, and analytics systems using
+            Python, SQL, Unix/Shell, and relational databases. Seeking Summer 2026 SWE / Data Engineering internships.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn primary" href="#projects">Explore Projects</a>
+            <a class="btn ghost" href="https://github.com/AarushiBahri" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn ghost" href="https://linkedin.com/in/aarushibahri" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-num">50+</div>
+              <div class="stat-label">Upstream data providers supported</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">30%</div>
+              <div class="stat-label">ETL processing time reduced</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">5+</div>
+              <div class="stat-label">Cross-functional teams partnered</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card">
+            <div class="hero-card-top">
+              <div class="avatar">
+                <span>AB</span>
+              </div>
+              <div>
+                <div class="hero-name">Aarushi Bahri</div>
+                <div class="hero-role">Data Engineering • Backend Systems</div>
+              </div>
+            </div>
+
+            <div class="hero-card-body">
+              <div class="mini-title">What I’m best at</div>
+              <div class="chips">
+                <span>Python</span><span>SQL</span><span>FastAPI</span><span>PostgreSQL</span>
+                <span>ETL</span><span>Unix/Shell</span><span>Data Modeling</span><span>Monitoring</span>
+              </div>
+
+              <div class="mini-title">Currently building</div>
+              <div class="mini-list">
+                <div class="mini-item">
+                  <div class="dot"></div>
+                  <div>
+                    <div class="mini-item-title">Messaging Service</div>
+                    <div class="mini-item-sub">API + DB schema + perf tuning</div>
+                  </div>
+                </div>
+                <div class="mini-item">
+                  <div class="dot"></div>
+                  <div>
+                    <div class="mini-item-title">ETL Pipeline</div>
+                    <div class="mini-item-sub">Incremental loads + data quality checks</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-card-actions">
+                <a class="btn small primary" href="#contact">Reach out</a>
+                <a class="btn small ghost" href="assets/Aarushi_Bahri_Resume.pdf" target="_blank" rel="noopener">View resume</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Projects -->
       <section id="projects" class="section">
-        <h2>Projects</h2>
-        <p class="section-sub">
-          Selected end-to-end projects spanning full-stack apps, data platforms, and databases.
-        </p>
+        <div class="section-head">
+          <div>
+            <h2>Featured Projects</h2>
+            <p class="muted">High-signal projects with clean READMEs, architecture, and measurable outcomes.</p>
+          </div>
+        </div>
+
+        <div class="featured-grid">
+          <article class="card featured">
+            <div class="card-head">
+              <div>
+                <h3>PathLearner — Adaptive Learning Roadmaps</h3>
+                <p class="muted">React • FastAPI • OpenAI API</p>
+              </div>
+              <div class="pill tiny">Full-Stack</div>
+            </div>
+
+            <p>
+              Full-stack app generating structured learning roadmaps from user inputs with API-backed inference,
+              validation, and a responsive UI.
+            </p>
+
+            <div class="metrics">
+              <div class="metric"><span class="metric-k">+40%</span><span class="metric-v">clarity improvement</span></div>
+              <div class="metric"><span class="metric-k">-30%</span><span class="metric-v">navigation friction</span></div>
+            </div>
+
+            <div class="chips">
+              <span>REST APIs</span><span>Modular design</span><span>Input validation</span><span>UX-first</span>
+            </div>
+
+            <div class="links">
+              <a href="https://github.com/AarushiBahri/PathLearner" target="_blank" rel="noopener">Code</a>
+      
+            </div>
+          </article>
+
+          <article class="card featured">
+            <div class="card-head">
+              <div>
+                <h3>Blockchain Voting System</h3>
+                <p class="muted">Ethereum • Node.js • React</p>
+              </div>
+              <div class="pill tiny">Security</div>
+            </div>
+
+            <p>
+              Decentralized e-voting with smart contracts for auditability and tamper-resistant vote storage,
+              integrated with a React UI and MySQL logging.
+            </p>
+
+            <div class="chips">
+              <span>Smart contracts</span><span>Crypto verification</span><span>Truffle</span><span>MySQL</span>
+            </div>
+
+            <div class="links">
+              <a href="https://github.com/AarushiBahri/Blockchain-voting-system" target="_blank" rel="noopener">Code</a>
+             
+            </div>
+          </article>
+        </div>
 
         <div class="grid">
-          <!-- PathLearner -->
           <article class="card">
-            <div class="card-top">
-              <h3>PathLearner — Adaptive Learning Roadmaps</h3>
-              <p class="muted">React • FastAPI • OpenAI API</p>
+            <div class="card-head">
+              <div>
+                <h3>miRNA Mutation Database</h3>
+                <p class="muted">MySQL • PHP • JavaScript</p>
+              </div>
+              <div class="pill tiny">Databases</div>
             </div>
 
             <p>
-              Full-stack app that generates structured learning roadmaps from user inputs using backend services and REST APIs.
-              Built with modular components for real-time inference, validation, and maintainability.
+              Searchable biomedical mutation database with optimized relational schema and indexing for fast retrieval.
             </p>
 
-            <ul class="bullets">
-              <li>Backend: REST APIs supporting inference + validation + extensibility</li>
-              <li>Frontend: interactive UI to visualize structured roadmaps</li>
-              <li>Improved clarity by ~40% and reduced navigation friction by 30%+</li>
-            </ul>
-
             <div class="chips">
-              <span>React</span><span>FastAPI</span><span>Python</span><span>OpenAI API</span>
+              <span>Schema design</span><span>Indexing</span><span>Query optimization</span><span>Visualization</span>
             </div>
 
             <div class="links">
-              <a href="https://github.com/AarushiBahri/REPLACE_WITH_REPO" target="_blank" rel="noopener">Code</a>
-              <a href="https://github.com/AarushiBahri/REPLACE_WITH_REPO#readme" target="_blank" rel="noopener">README</a>
+              <a href="https://github.com/AarushiBahri/jcomp-biodb" target="_blank" rel="noopener">Code</a>
+             
             </div>
           </article>
 
-          <!-- Blockchain Voting -->
           <article class="card">
-            <div class="card-top">
-              <h3>Blockchain Voting System</h3>
-              <p class="muted">Ethereum • Node.js • React</p>
+            <div class="card-head">
+              <div>
+                <h3>Health Assistant</h3>
+                <p class="muted">Node.js • MongoDB • Automation</p>
+              </div>
+              <div class="pill tiny">Product</div>
             </div>
 
             <p>
-              Decentralized e-voting platform using Ethereum smart contracts to ensure auditability, transparency,
-              and tamper-proof vote storage. Integrated contracts with a React UI and MySQL logging.
+              Web platform for pharmacy inventory lookup, prescription delivery workflows, and chatbot-based guidance.
             </p>
 
-            <ul class="bullets">
-              <li>Smart contracts for secure voting + cryptographic verification</li>
-              <li>Truffle integration with React workflows</li>
-              <li>MySQL logging layer for tracking and auditing</li>
-            </ul>
-
             <div class="chips">
-              <span>React</span><span>Node.js</span><span>MySQL</span><span>Ethereum</span>
+              <span>Automation</span><span>Inventory checks</span><span>MongoDB</span><span>Chat workflows</span>
             </div>
 
             <div class="links">
-              <a href="https://github.com/AarushiBahri/REPLACE_WITH_REPO" target="_blank" rel="noopener">Code</a>
-              <a href="https://github.com/AarushiBahri/REPLACE_WITH_REPO#readme" target="_blank" rel="noopener">README</a>
+              <a href="https://github.com/AarushiBahri/Dawa-Dukan" target="_blank" rel="noopener">Code</a>
+              
             </div>
           </article>
 
-          <!-- miRNA -->
-          <article class="card">
-            <div class="card-top">
-              <h3>miRNA Mutation Database</h3>
-              <p class="muted">MySQL • PHP • JS</p>
-            </div>
-
-            <p>
-              Searchable biomedical mutation database for microRNA sequences supporting research workflows.
-              Implemented optimized relational schema design and SQL indexing for fast retrieval.
+          <article class="card callout">
+            <h3>Want to see more?</h3>
+            <p class="muted">
+              I keep projects concise and high-signal. Each repo includes: problem → architecture → how to run → results.
             </p>
-
-            <ul class="bullets">
-              <li>Relational schema design + indexing for faster queries</li>
-              <li>Interactive visualization for mutation query results</li>
-              <li>Built for real research and genomics analysis use cases</li>
-            </ul>
-
-            <div class="chips">
-              <span>MySQL</span><span>PHP</span><span>JavaScript</span><span>HTML/CSS</span>
-            </div>
-
             <div class="links">
-              <a href="https://github.com/AarushiBahri/REPLACE_WITH_REPO" target="_blank" rel="noopener">Code</a>
-              <a href="https://github.com/AarushiBahri/REPLACE_WITH_REPO#readme" target="_blank" rel="noopener">README</a>
+              <a href="https://github.com/AarushiBahri?tab=repositories" target="_blank" rel="noopener">All repos</a>
+              <a href="#contact">Contact</a>
             </div>
           </article>
-
-          <!-- Health Assistant -->
-          <article class="card">
-            <div class="card-top">
-              <h3>Health Assistant</h3>
-              <p class="muted">Node.js • MongoDB • Automation</p>
-            </div>
-
-            <p>
-              Integrated medical assistance web platform offering pharmacy inventory lookup, prescription delivery,
-              and chatbot-based guidance using FlowXO automation.
-            </p>
-
-            <ul class="bullets">
-              <li>Real-time medicine availability checks</li>
-              <li>Chatbot-based guidance for user support</li>
-              <li>Designed to improve access for underserved communities</li>
-            </ul>
-
-            <div class="chips">
-              <span>Node.js</span><span>MongoDB</span><span>HTML/CSS</span><span>FlowXO</span>
-            </div>
-
-            <div class="links">
-              <a href="https://github.com/AarushiBahri/REPLACE_WITH_REPO" target="_blank" rel="noopener">Code</a>
-              <a href="https://github.com/AarushiBahri/REPLACE_WITH_REPO#readme" target="_blank" rel="noopener">README</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="note">
-          <p class="muted">
-            Tip: for each project repo, add a strong README with: problem → architecture diagram → tech stack → how to run → results.
-          </p>
         </div>
       </section>
 
-      <!-- EXPERIENCE -->
+      <!-- Experience -->
       <section id="experience" class="section">
-        <h2>Experience</h2>
-
-        <article class="card">
-          <div class="card-top">
-            <h3>Bank of America — Officer Software Engineer I</h3>
-            <p class="muted">Hyderabad, India • Jul 2023 – Jul 2025</p>
+        <div class="section-head">
+          <div>
+            <h2>Experience</h2>
+            <p class="muted">Impact-focused work on data pipelines, reliability, and production systems.</p>
           </div>
+        </div>
 
-          <ul class="bullets">
-            <li>Built and maintained large-scale ETL pipelines ingesting data from 50+ upstream sources into enterprise Oracle-based systems.</li>
-            <li>Optimized batch workflows using Python, SQL, Unix, and Shell, reducing end-to-end processing time by 30% via automation and robust error handling.</li>
-            <li>Developed automated reporting, scheduling, and monitoring with exception alerts and log analysis to improve reliability and operational visibility.</li>
-            <li>Partnered with 5+ cross-functional teams to troubleshoot ETL logic, schema mismatches, and DB performance issues—improving delivery timelines by 40%.</li>
-          </ul>
-        </article>
+        <div class="timeline">
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-card">
+              <div class="t-top">
+                <div>
+                  <h3>Bank of America — Officer Software Engineer I</h3>
+                  <p class="muted">Jul 2023 – Jul 2025 • Hyderabad, India</p>
+                </div>
+                <div class="pill tiny">ETL • Oracle • Ops</div>
+              </div>
+
+              <ul class="bullets">
+                <li>Built large-scale ETL pipelines ingesting data from 50+ sources into enterprise Oracle-based systems.</li>
+                <li>Reduced end-to-end batch processing time by 30% via automation, error handling, and workflow optimization.</li>
+                <li>Implemented monitoring and exception alerts to improve reliability and operational visibility.</li>
+                <li>Collaborated with 5+ teams to resolve schema mismatches, ETL logic issues, and DB performance bottlenecks.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <!-- SKILLS -->
+      <!-- Skills -->
       <section id="skills" class="section">
-        <h2>Skills</h2>
+        <div class="section-head">
+          <div>
+            <h2>Skills</h2>
+            <p class="muted">Tools I use to ship production-grade systems and analytics workflows.</p>
+          </div>
+        </div>
 
-        <div class="two-col">
-          <div class="card slim">
+        <div class="skill-grid">
+          <div class="card">
             <h3>Programming</h3>
-            <p class="muted">Python, SQL, C++, Java</p>
+            <p class="muted">Python, SQL, Java, C++</p>
           </div>
-
-          <div class="card slim">
-            <h3>ML & Data Tools</h3>
-            <p class="muted">OpenAI API, Pandas, NumPy, Scikit-learn, PyTorch (basic), OpenCV</p>
+          <div class="card">
+            <h3>Backend</h3>
+            <p class="muted">FastAPI, Node.js, REST APIs, Testing patterns</p>
           </div>
-
-          <div class="card slim">
+          <div class="card">
             <h3>Databases</h3>
-            <p class="muted">Oracle DB, MySQL, MongoDB</p>
+            <p class="muted">Oracle DB, MySQL, MongoDB, Data Modeling</p>
           </div>
-
-          <div class="card slim">
-            <h3>Full Stack</h3>
-            <p class="muted">React, ReactFlow, FastAPI, Node.js, REST APIs, HTML/CSS</p>
+          <div class="card">
+            <h3>Data & ML</h3>
+            <p class="muted">Pandas, NumPy, Scikit-learn, PyTorch (basic), OpenAI API</p>
           </div>
-
-          <div class="card slim">
-            <h3>Analytics & BI</h3>
+          <div class="card">
+            <h3>Analytics</h3>
             <p class="muted">Tableau, Power BI, Excel</p>
           </div>
-
-          <div class="card slim">
-            <h3>Tools & Concepts</h3>
-            <p class="muted">Git, Unix/Linux, Shell scripting • Data Structures, Algorithms, Enterprise data platforms</p>
+          <div class="card">
+            <h3>Systems</h3>
+            <p class="muted">Unix/Linux, Shell, Git, Monitoring & Logging</p>
           </div>
         </div>
       </section>
 
-      <!-- EDUCATION -->
+      <!-- Education -->
       <section id="education" class="section">
-        <h2>Education</h2>
+        <div class="section-head">
+          <div>
+            <h2>Education</h2>
+            <p class="muted">Academic foundation in data science, CS, and systems.</p>
+          </div>
+        </div>
 
-        <div class="grid grid-2">
-          <article class="card">
-            <div class="card-top">
-              <h3>Stony Brook University</h3>
-              <p class="muted">Aug 2025 – May 2027</p>
+        <div class="edu-grid">
+          <div class="card">
+            <div class="card-head">
+              <div>
+                <h3>Stony Brook University</h3>
+                <p class="muted">MS in Data Science • Aug 2025 – May 2027</p>
+              </div>
+              <div class="pill tiny">GPA: 3.45</div>
             </div>
-            <p class="muted">Master of Science in Data Science</p>
-          </article>
+            <p class="muted">Relevant focus: data engineering, analytics, ML foundations.</p>
+          </div>
 
-          <article class="card">
-            <div class="card-top">
-              <h3>Vellore Institute of Technology</h3>
-              <p class="muted">Jul 2019 – May 2023</p>
+          <div class="card">
+            <div class="card-head">
+              <div>
+                <h3>Vellore Institute of Technology</h3>
+                <p class="muted">B.Tech CSE (Bioinformatics) • Jul 2019 – May 2023</p>
+              </div>
+              <div class="pill tiny">CGPA: 8.32/10</div>
             </div>
-            <p class="muted">B.Tech in Computer Science (Bioinformatics specialization) • CGPA: 8.32/10</p>
-          </article>
+            <p class="muted">Strong CS fundamentals: data structures, algorithms, databases.</p>
+          </div>
         </div>
       </section>
 
-      <!-- CONTACT -->
+      <!-- Contact -->
       <section id="contact" class="section">
-        <h2>Contact</h2>
+        <div class="section-head">
+          <div>
+            <h2>Contact</h2>
+            <p class="muted">Open to Summer 2026 internships and collaboration.</p>
+          </div>
+        </div>
 
-        <div class="card">
-          <p class="muted">
-            Email:
-            <a href="mailto:aarushibahri1010@gmail.com">aarushibahri1010@gmail.com</a>
-            <br />
-            Phone: 631-361-1894
-            <br />
-            GitHub:
-            <a href="https://github.com/AarushiBahri" target="_blank" rel="noopener">github.com/AarushiBahri</a>
-            <br />
-            LinkedIn:
-            <a href="https://linkedin.com/in/aarushibahri" target="_blank" rel="noopener">linkedin.com/in/aarushibahri</a>
-          </p>
+        <div class="contact-card">
+          <div class="contact-left">
+            <div class="contact-title">Let’s talk</div>
+            <p class="muted">
+              Best way to reach me is email. I respond quickly and I’m happy to share details, demos, or a project walkthrough.
+            </p>
+            <div class="contact-actions">
+              <a class="btn primary" href="mailto:aarushibahri1010@gmail.com">Email</a>
+              <a class="btn ghost" href="assets/Aarushi_Bahri_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+            </div>
+          </div>
+
+          <div class="contact-right">
+            <div class="contact-row">
+              <span class="label">Email</span>
+              <a href="mailto:aarushibahri1010@gmail.com">aarushibahri1010@gmail.com</a>
+            </div>
+            <div class="contact-row">
+              <span class="label">GitHub</span>
+              <a href="https://github.com/AarushiBahri" target="_blank" rel="noopener">github.com/AarushiBahri</a>
+            </div>
+            <div class="contact-row">
+              <span class="label">LinkedIn</span>
+              <a href="https://linkedin.com/in/aarushibahri" target="_blank" rel="noopener">linkedin.com/in/aarushibahri</a>
+            </div>
+          </div>
         </div>
       </section>
 
       <footer class="footer">
-        <p class="muted">© <span id="year"></span> Aarushi Bahri • Hosted on GitHub Pages</p>
+        <div class="muted">© <span id="year"></span> Aarushi Bahri • Built with GitHub Pages</div>
       </footer>
     </main>
 
@@ -301,4 +398,3 @@
     </script>
   </body>
 </html>
-
