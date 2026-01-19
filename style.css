@@ -510,4 +510,9 @@ h3{ margin:0; font-size: 16px; }
   opacity: 1;
   left: 120%;
 }
+/* Make project images look richer */
+.p-media img{
+  filter: saturate(1.15) contrast(1.08);
+}
+
 
