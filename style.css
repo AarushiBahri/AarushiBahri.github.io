@@ -632,3 +632,30 @@ h2{ margin: 0; font-size: 28px; letter-spacing: -0.2px; }
 :root[data-theme="light"] .pill.solid span{
   color: var(--cta-text-dark) !important;
 }
+/* Light mode: soften project image container */
+:root[data-theme="light"] .p-media.split{
+  background: transparent !important;
+  border-right: 1px solid rgba(0,113,227,.18) !important;
+}
+:root[data-theme="light"] .p-media.split img{
+  background: transparent !important;
+  box-shadow: none !important;
+}
+:root[data-theme="light"] .p-badge{
+  background: rgba(0,113,227,.12) !important;
+  color: #0B1220 !important;
+  border: 1px solid rgba(0,113,227,.25) !important;
+  backdrop-filter: none !important;
+}
+:root[data-theme="light"] .p-media.split img[src*="PathLearner"]{
+  filter: grayscale(100%) contrast(.9) brightness(.95);
+}
+:root[data-theme="light"] .p-card.split{
+  background: linear-gradient(
+    180deg,
+    #EAF2FF 0%,
+    #E3EEFF 100%
+  ) !important;
+
+  border: 1px solid rgba(0,113,227,.18) !important;
+}
