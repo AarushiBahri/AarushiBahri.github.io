@@ -10,38 +10,7 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <script>
-  const THEME_KEY = "theme"; // "light" | "dark"
-  const root = document.documentElement;
-  const btn = document.getElementById("themeToggle");
-
-  function applyTheme(theme){
-    root.setAttribute("data-theme", theme);
-
-    const ico = btn?.querySelector(".theme-ico");
-    const txt = btn?.querySelector(".theme-text");
-
-    if (theme === "light"){
-      if (ico) ico.textContent = "☀️";
-      if (txt) txt.textContent = "Light";
-    } else {
-      if (ico) ico.textContent = "🌙";
-      if (txt) txt.textContent = "Dark";
-    }
-  }
-
-  // Load saved theme or default to dark
-  const saved = localStorage.getItem(THEME_KEY) || "dark";
-  applyTheme(saved);
-
-  // Toggle on click
-  btn?.addEventListener("click", () => {
-    const current = root.getAttribute("data-theme") || "dark";
-    const next = current === "dark" ? "light" : "dark";
-    localStorage.setItem(THEME_KEY, next);
-    applyTheme(next);
-  });
-  </script>
+  
   <body>
     <!-- Background visuals -->
     <div class="bg-orb orb1"></div>
@@ -88,11 +57,11 @@
           </h1>
 
           <p class="lead">
-            I am a <span class ="bold-text">Software Engineer with 2+</span> years of experience building backend systems and large-scale data pipelines, currently pursuing a <span class ="bold-text">Master’s in Data Science</span> at Stony Brook University.
+            I am a <b>Software Engineer with 2+</b> years of experience building backend systems and large-scale data pipelines, currently pursuing a <b>Master’s in Data Science</b> at Stony Brook University.
 
 My work focuses on backend engineering and data systems, including designing reliable services, optimizing ETL workflows, and building end-to-end data-driven applications.
 
-I am seeking <span class ="bold-text">Summer 2026 internships</span> in <span class ="bold-text">Software Engineering, Data Engineering, and Applied Data Science</span>.
+I am seeking <b>Summer 2026 internships</b> in <b>Software Engineering, Data Engineering, and Applied Data Science</b>.
           </p>
 
           <div class="hero-cta">
@@ -107,7 +76,7 @@ I am seeking <span class ="bold-text">Summer 2026 internships</span> in <span cl
               <div class="stat-d">Built scalable backend and data systems used in production</div>
             </div>
             <div class="stat">
-              <div class="stat-d">Reduced data processing time through automated ETL pipelines by <div class="stat-bold text">30%</div> </div>
+              <div class="stat-d">Reduced data processing time through automated ETL pipelines by <b">30%</b> </div>
             </div>
             <div class="stat">
               
@@ -480,6 +449,41 @@ I am seeking <span class ="bold-text">Summer 2026 internships</span> in <span cl
   // Footer year
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+    <script>
+  const THEME_KEY = "theme"; // "light" | "dark"
+  const root = document.documentElement;
+
+  function applyTheme(theme){
+    root.setAttribute("data-theme", theme);
+
+    const btn = document.getElementById("themeToggle");
+    if (!btn) return;
+
+    const ico = btn.querySelector(".theme-ico");
+    const txt = btn.querySelector(".theme-text");
+
+    if (theme === "light"){
+      if (ico) ico.textContent = "☀️";
+      if (txt) txt.textContent = "Light";
+    } else {
+      if (ico) ico.textContent = "🌙";
+      if (txt) txt.textContent = "Dark";
+    }
+  }
+
+  // Load saved theme or default to dark
+  const saved = localStorage.getItem(THEME_KEY) || "dark";
+  applyTheme(saved);
+
+  // Toggle on click
+  document.getElementById("themeToggle")?.addEventListener("click", () => {
+    const current = root.getAttribute("data-theme") || "dark";
+    const next = current === "dark" ? "light" : "dark";
+    localStorage.setItem(THEME_KEY, next);
+    applyTheme(next);
+  });
+</script>
+
 
   </body>
 </html>
