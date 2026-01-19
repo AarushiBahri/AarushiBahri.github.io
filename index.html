@@ -10,68 +10,7 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <script>
-  const modal = document.getElementById("projectModal");
-  const modalTitle = document.getElementById("modalTitle");
-  const modalSub = document.getElementById("modalSub");
-  const modalImg = document.getElementById("modalImg");
-  const modalTags = document.getElementById("modalTags");
-  const modalBullets = document.getElementById("modalBullets");
-  const modalCode = document.getElementById("modalCode");
-  const modalReadme = document.getElementById("modalReadme");
-
-  function openModal(btn){
-    const title = btn.dataset.title || "";
-    const subtitle = btn.dataset.subtitle || "";
-    const image = btn.dataset.image || "";
-    const tags = (btn.dataset.tags || "").split(",").map(s => s.trim()).filter(Boolean);
-    const bullets = (btn.dataset.bullets || "").split("|").map(s => s.trim()).filter(Boolean);
-    const links = (btn.dataset.links || "").split(",").map(s => s.trim());
-
-    modalTitle.textContent = title;
-    modalSub.textContent = subtitle;
-    modalImg.src = image;
-    modalImg.alt = title;
-
-    modalTags.innerHTML = "";
-    tags.forEach(t => {
-      const chip = document.createElement("span");
-      chip.textContent = t;
-      modalTags.appendChild(chip);
-    });
-
-    modalBullets.innerHTML = "";
-    bullets.forEach(b => {
-      const li = document.createElement("li");
-      li.textContent = b;
-      modalBullets.appendChild(li);
-    });
-
-    modalCode.href = links[0] || "#";
-    modalReadme.href = links[1] || (links[0] ? links[0] + "#readme" : "#");
-
-    modal.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeModal(){
-    modal.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-  }
-
-  document.querySelectorAll(".details-btn").forEach(btn => {
-    btn.addEventListener("click", () => openModal(btn));
-  });
-
-  modal.addEventListener("click", (e) => {
-    if (e.target?.dataset?.close === "true") closeModal();
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.getAttribute("aria-hidden") === "false") closeModal();
-  });
-</script>
-
+ 
   <body>
     <!-- Background visuals -->
     <div class="bg-orb orb1"></div>
@@ -186,14 +125,7 @@ I am seeking <span class ="bold-text">Summer 2026 internships</span> in <span cl
           </div>
         </div>
       </section>
-
-      <section id="projects" class="section">
-  <div class="section-head">
-    <div>
-      <h2>Featured Projects</h2>
       
-    </div>
-  </div>
 
   <section id="projects" class="section">
   <div class="section-head">
@@ -371,9 +303,7 @@ I am seeking <span class ="bold-text">Summer 2026 internships</span> in <span cl
         <div class="modal-content">
           <h3 id="modalTitle"></h3>
           <p id="modalSub" class="muted"></p>
-
           <div id="modalTags" class="chips"></div>
-
           <ul id="modalBullets" class="modal-bullets"></ul>
 
           <div class="modal-actions">
@@ -385,6 +315,7 @@ I am seeking <span class ="bold-text">Summer 2026 internships</span> in <span cl
     </div>
   </div>
 </section>
+
 
 
 
@@ -565,7 +496,70 @@ I am seeking <span class ="bold-text">Summer 2026 internships</span> in <span cl
     </main>
 
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+  // Footer year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // ---- Project modal ----
+  const modal = document.getElementById("projectModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalSub = document.getElementById("modalSub");
+  const modalImg = document.getElementById("modalImg");
+  const modalTags = document.getElementById("modalTags");
+  const modalBullets = document.getElementById("modalBullets");
+  const modalCode = document.getElementById("modalCode");
+  const modalReadme = document.getElementById("modalReadme");
+
+  function openModal(btn){
+    const title = btn.dataset.title || "";
+    const subtitle = btn.dataset.subtitle || "";
+    const image = btn.dataset.image || "";
+    const tags = (btn.dataset.tags || "").split(",").map(s => s.trim()).filter(Boolean);
+    const bullets = (btn.dataset.bullets || "").split("|").map(s => s.trim()).filter(Boolean);
+    const links = (btn.dataset.links || "").split(",").map(s => s.trim());
+
+    modalTitle.textContent = title;
+    modalSub.textContent = subtitle;
+    modalImg.src = image;
+    modalImg.alt = title;
+
+    modalTags.innerHTML = "";
+    tags.forEach(t => {
+      const chip = document.createElement("span");
+      chip.textContent = t;
+      modalTags.appendChild(chip);
+    });
+
+    modalBullets.innerHTML = "";
+    bullets.forEach(b => {
+      const li = document.createElement("li");
+      li.textContent = b;
+      modalBullets.appendChild(li);
+    });
+
+    modalCode.href = links[0] || "#";
+    modalReadme.href = links[1] || (links[0] ? links[0] + "#readme" : "#");
+
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal(){
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  document.querySelectorAll(".details-btn").forEach(btn => {
+    btn.addEventListener("click", () => openModal(btn));
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target?.dataset?.close === "true") closeModal();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.getAttribute("aria-hidden") === "false") closeModal();
+  });
+</script>
+
   </body>
 </html>
