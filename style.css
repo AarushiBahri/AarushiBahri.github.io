@@ -605,3 +605,79 @@ h3{ margin:0; font-size: 16px; }
 }
 .p-mini li{ margin: 7px 0; }
 
+/* =========================
+   FORCE OPTION 2 (Split Cards)
+   Paste at very bottom
+========================= */
+
+/* override old 2-column grid */
+.project-grid.split{
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+  margin-top: 14px !important;
+}
+
+/* split card layout */
+.p-card.split{
+  display: grid !important;
+  grid-template-columns: 260px 1fr !important;
+  border-radius: 22px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  background: rgba(14,18,34,.70) !important;
+  box-shadow: 0 18px 60px rgba(0,0,0,.35) !important;
+}
+
+@media (max-width: 920px){
+  .p-card.split{ grid-template-columns: 1fr !important; }
+}
+
+/* media column */
+.p-media.split{
+  position: relative !important;
+  min-height: 220px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 14px !important;
+  background:
+    radial-gradient(900px 260px at 50% 30%, rgba(122,162,255,.16), transparent 60%),
+    rgba(255,255,255,.03) !important;
+  border-right: 1px solid rgba(255,255,255,.08) !important;
+}
+
+/* remove old overlay gradient */
+.p-media.split::after{ content: none !important; }
+
+/* show FULL image (no crop) */
+.p-media.split img{
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  transform: none !important;  /* disables old zoom */
+}
+
+/* badge visible */
+.p-media.split .p-badge{
+  position: absolute !important;
+  top: 12px !important;
+  left: 12px !important;
+  z-index: 2 !important;
+}
+
+/* content column */
+.p-body.split{
+  padding: 16px !important;
+}
+
+.p-mini{
+  margin: 10px 0 0 !important;
+  padding-left: 18px !important;
+  color: rgba(234,240,255,.72) !important;
+  line-height: 1.5 !important;
+}
+.p-mini li{ margin: 7px 0 !important; }
