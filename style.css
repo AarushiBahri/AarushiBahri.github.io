@@ -681,3 +681,22 @@ h3{ margin:0; font-size: 16px; }
   line-height: 1.5 !important;
 }
 .p-mini li{ margin: 7px 0 !important; }
+/* === Uniform project image sizing (SAFE & CLEAN) === */
+.p-media.split{
+  width: 100%;
+  min-height: 220px;        /* controls visual height */
+  max-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+
+.p-media.split img{
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;     /* shows full image */
+}
+
