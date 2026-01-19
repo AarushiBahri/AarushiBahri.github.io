@@ -10,7 +10,21 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
- 
+  <script>
+  function applyThemeSmart() {
+    const hour = new Date().getHours();
+    const timeTheme = (hour >= 7 && hour < 19) ? "light" : "dark";
+    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    // If user prefers dark, keep dark; otherwise follow time
+    const theme = prefersDark ? "dark" : timeTheme;
+    document.documentElement.setAttribute("data-theme", theme);
+  }
+
+  applyThemeSmart();
+  setInterval(applyThemeSmart, 5 * 60 * 1000);
+</script>
+
   <body>
     <!-- Background visuals -->
     <div class="bg-orb orb1"></div>
@@ -138,7 +152,7 @@ I am seeking <span class ="bold-text">Summer 2026 internships</span> in <span cl
     <article class="p-card split">
       <a class="p-media split" href="https://github.com/AarushiBahri/PathLearner" target="_blank" rel="noopener">
         <img src="assets/PathLearner.png" alt="PathLearner preview" loading="lazy" />
-        <div class="p-badge">Full-Stack</div>
+        <div class="p-badge">Full-Stack, AI</div>
       </a>
 
       <div class="p-body split">
@@ -168,7 +182,7 @@ I am seeking <span class ="bold-text">Summer 2026 internships</span> in <span cl
     <article class="p-card split">
       <a class="p-media split" href="https://github.com/AarushiBahri/Blockchain-voting-system" target="_blank" rel="noopener">
         <img src="assets/voting.png" alt="Blockchain voting preview" loading="lazy" />
-        <div class="p-badge">Security</div>
+        <div class="p-badge">Full Stack, Security</div>
       </a>
 
       <div class="p-body split">
@@ -198,7 +212,7 @@ I am seeking <span class ="bold-text">Summer 2026 internships</span> in <span cl
     <article class="p-card split">
       <a class="p-media split" href="https://github.com/AarushiBahri/jcomp-biodb" target="_blank" rel="noopener">
         <img src="assets/mirna.png" alt="miRNA database preview" loading="lazy" />
-        <div class="p-badge">Databases</div>
+        <div class="p-badge">Full Stack, Databases</div>
       </a>
 
       <div class="p-body split">
@@ -228,7 +242,7 @@ I am seeking <span class ="bold-text">Summer 2026 internships</span> in <span cl
     <article class="p-card split">
       <a class="p-media split" href="https://github.com/AarushiBahri/Dawa-Dukan" target="_blank" rel="noopener">
         <img src="assets/health.png" alt="Health Assistant preview" loading="lazy" />
-        <div class="p-badge">Product</div>
+        <div class="p-badge">Full Stack Product</div>
       </a>
 
       <div class="p-body split">
