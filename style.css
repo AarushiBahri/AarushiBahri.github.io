@@ -38,6 +38,15 @@
   --accent: #0A84FF;             /* iOS system blue */
   --accent2: #5AA9FF;
 }
+:root[data-theme="light"]{
+  /* soft blue surface */
+  --surface-blue: linear-gradient(
+    135deg,
+    rgba(10,132,255,.10),
+    rgba(90,169,255,.08)
+  );
+}
+
 
 
 /* =========================
@@ -575,10 +584,51 @@ h2{ margin: 0; font-size: 28px; letter-spacing: -0.2px; }
   text-align:center;
   color: var(--muted);
 }
+/* Light mode: blue-tinted cards everywhere */
 :root[data-theme="light"] .card,
 :root[data-theme="light"] .p-card,
-:root[data-theme="light"] .hero-card{
-  background: var(--card) !important;
-  border: 1px solid rgba(11,18,32,.08) !important;
-  box-shadow: var(--shadow) !important;
+:root[data-theme="light"] .hero-card,
+:root[data-theme="light"] .t-card,
+:root[data-theme="light"] .contact-right{
+  background: var(--surface-blue) !important;
+  border: 1px solid rgba(10,132,255,.18) !important;
+  box-shadow: 0 14px 32px rgba(10,132,255,.12) !important;
+}
+:root[data-theme="light"] .card:hover,
+:root[data-theme="light"] .p-card:hover{
+  background: linear-gradient(
+    135deg,
+    rgba(10,132,255,.14),
+    rgba(90,169,255,.12)
+  ) !important;
+  transform: translateY(-3px);
+}
+:root[data-theme="light"] .pill,
+:root[data-theme="light"] .chips span{
+  background: rgba(10,132,255,.10);
+  border: 1px solid rgba(10,132,255,.20);
+  color: #0B1220;
+}
+/* =========================
+   Light mode CTA text → BLACK
+========================= */
+
+:root[data-theme="light"]{
+  --cta-text-dark: #0B1220; /* Apple-style near black */
+}
+
+/* Primary buttons (Explore Projects, Reach out, Email) */
+:root[data-theme="light"] .btn.primary{
+  color: var(--cta-text-dark) !important;
+}
+
+/* Navbar Resume pill */
+:root[data-theme="light"] .pill.solid{
+  color: var(--cta-text-dark) !important;
+}
+
+/* Safety: ensure icons/text inside buttons also turn dark */
+:root[data-theme="light"] .btn.primary span,
+:root[data-theme="light"] .pill.solid span{
+  color: var(--cta-text-dark) !important;
 }
