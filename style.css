@@ -433,7 +433,7 @@ h3{ margin:0; font-size: 16px; }
 .p-media{
   display:block;
   position: relative;
-  height: 160px;
+  height: 150px;
   overflow:hidden;
   background: rgba(255,255,255,.03);
 }
@@ -513,6 +513,10 @@ h3{ margin:0; font-size: 16px; }
 /* Make project images look richer */
 .p-media img{
   filter: saturate(1.15) contrast(1.08);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* prevents squishing */
+  object-position: center;
 }
 
 
